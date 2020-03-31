@@ -19,3 +19,10 @@
     - [x] 小样本问题：无监督数据扩增、借助图形学等物理模型生成（GAN不可控原因）、多模态想办法多利用样本、模型-数据迭代
     - [ ] 样本不均衡问题：
     - [x] 人脸检测后序子任务问题：质量评估 + 筛选/针对后续问题强化
+
+## Embedding
+从高维空间向低维空间的映射
+
+## 行为识别
+
+- [ ] A comprehensive survey of vision-based human action recognition methods
