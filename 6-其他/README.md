@@ -16,3 +16,10 @@
             - [ ] 手动复制conda 环境，这个待探讨
         - [ ] virtualenv： `python3 -m venv venv` Python[官方写法](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)用上述方法执行python包
     - [ ] 维护与扩容
+    - P100 租赁计划，其中服务器硬盘挂载 [link](https://steemit.com/cn/@oflyhigh/ubuntu-18-04-nvme-m-2-ssd-and) 
+      - 硬件部分
+        - 查看硬件 fdisk
+        - 分区 + 格式化
+      - 软件部分
+        - 写自动挂载脚本
+        - 自动挂载

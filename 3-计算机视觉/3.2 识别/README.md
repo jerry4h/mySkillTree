@@ -8,6 +8,7 @@
     - [x] 为什么特征幅值L2范数较小，易受干扰？因为相同抖动噪声情况下，大L2范数的幅值稳定性更强。
     - [x] Arcface 与 [Focal Loss](../3.3%20检测.md) 的矛盾所在：Arcface 欠拟合，Focal Loss 简单样本过拟合。
     - [ ] 人脸识别的评价指标
+    - [ ] ArcFace 对多种场景的应用有提升吗？对于简单任务场景/复杂任务场景？可以看看利用 Arcface 的其余领域文章。
 - [ ] Triplet loss 的 pytorch [代码](https://discuss.pytorch.org/t/triplet-loss-in-pytorch/30634)：`loss=torch.mean(relu(dist(anchor,pos)+m-dist(anchor,neg)))` 
 - [ ] 当前人脸识别损失函数的发展趋势
 - [ ] pytorch 实现过哪些层：自定义的损失函数，然后还有 GLFF 论文中也实现过许多融合的策略的可能性，不同的网络结构。
