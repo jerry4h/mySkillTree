@@ -63,6 +63,6 @@ def copyFile(filePath, outRoot):
 if __name__ == '__main__':
     ftools = fileTools()
     inPath = 'D:\\BaiduNetdiskDownload\\webface_align_112.tar\\webface_align_112'
-    outPath = 'D:\\BaiduNetdiskDownload\\webface_align_112.tar\\selectTest' /mnt/data/hjr/regularDownloader/
+    outPath = 'D:\\BaiduNetdiskDownload\\webface_align_112.tar\\selectTest' 
     ftools.Select(inPath=inPath, outPath=outPath,
      checkFunc=isColorImage, workFunc=copyFile,selectNum=1)
