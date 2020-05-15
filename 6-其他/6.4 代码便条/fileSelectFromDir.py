@@ -1,6 +1,9 @@
+# -*- coding: gbk -*-
+
 import os
 import os.path as osp
 import numpy as np
+from random import sample
 from tqdm import tqdm
 import cv2
 import pdb
@@ -22,16 +25,18 @@ class fileTools:
         for idName in tqdm(ids):
             idPath = osp.join(inPath, idName)
             names = os.listdir(idPath)
-            names.sort()
-            satisfied = 0
+            k = min(len(names), selectNum)
+            names = sample(names, k)
+            # names.sort()
+            # satisfied = 0
             for name in names:
                 imgPath = osp.join(idPath, name)
                 status = checkFunc(imgPath)
                 if status:
                     workFunc(imgPath, outPath)
-                    satisfied += status
-                if satisfied == selectNum:
-                    break
+                    # satisfied += status
+                # if satisfied == selectNum:
+                #     break
                 
 
 def isColorImage(imgPath, suffix='.jpg'):
@@ -58,11 +63,20 @@ def copyFile(filePath, outRoot):
     fileName = osp.split(filePath)[-1]
     dstPath = osp.join(outRoot, fileName)
     copyfile(filePath, dstPath)
+    
+def copyFile2(filePath, outRoot):
+    # import pdb
+    # pdb.set_trace()
+    temp, name = osp.split(filePath)
+    _, idx = osp.split(temp)
+    fileName = '_'.join([idx, name])
+    dstPath = osp.join(outRoot, fileName)
+    copyfile(filePath, dstPath)
 
             
 if __name__ == '__main__':
     ftools = fileTools()
-    inPath = 'D:\\BaiduNetdiskDownload\\webface_align_112.tar\\webface_align_112'
-    outPath = 'D:\\BaiduNetdiskDownload\\webface_align_112.tar\\selectTest' 
+    inPath = './generator'
+    outPath = './randomSelected' 
     ftools.Select(inPath=inPath, outPath=outPath,
-     checkFunc=isColorImage, workFunc=copyFile,selectNum=1)
+                  checkFunc=isColorImage, workFunc=copyFile2,selectNum=1)
