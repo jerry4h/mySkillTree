@@ -32,3 +32,11 @@
 - [ ] cGAN
 - [ ] **styleGAN**
 - [ ] proGAN
+- [ ] GANnotation: [github](https://github.com/ESanchezLozano/GANnotation)
+  - 学会人脸关键点的生成，但不会保留特定的身份信息 [link](https://github.com/ESanchezLozano/GANnotation/issues/7)
+
+- [ ] 换脸代码复现
+  - [ ] 数据下载
+  - [x] FaceSwap
+  - [ ] Deepfakes
+  - [ ] cycleGAN
